@@ -5,97 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:background="#F5F5F7"
+    tools:context=".ui.Activities.Main.MainActivity"
     >
 
-    <LinearLayout
+    <include
+        layout="@layout/home_top_container"
         android:id="@+id/h_top"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:background="@color/main_blue"
-        android:gravity="center"
-        >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            >
-            <ImageView
-                android:id="@+id/home_qr_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/round_qr_code_scanner_24"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="15dp"
-                app:tint="#fff"
-                android:layout_toStartOf="@id/home_notification"
-                />
-
-            <RelativeLayout
-                android:id="@+id/home_notification"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:gravity="end"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/round_notifications_24"
-                    app:tint="#fff"
-                    />
-
-                <TextView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:text="1"
-                    android:background="@drawable/circle"
-                    android:backgroundTint="#f00"
-                    android:gravity="center"
-                    android:textSize="8sp"
-                    android:textColor="#fff"
-                    android:textStyle="bold"
-                    android:layout_alignParentEnd="true"
-                    />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rect_curve_20dp"
-                android:backgroundTint="@color/splash3"
-                android:layout_toStartOf="@+id/home_qr_icon"
-                android:layout_marginEnd="15dp"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Search"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:textColor="#fff"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginVertical="10dp"
-                    />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/baseline_keyboard_voice_24"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="20dp"
-                    app:tint="#fff"
-                    />
-            </RelativeLayout>
-        </RelativeLayout>
-
-    </LinearLayout>
+        />
+    <include
+        android:id="@+id/h_bottom"
+        layout="@layout/home_bottom_container"
+        />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -113,131 +34,419 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="4"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="20dp"
                 >
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginTop="10dp"
                     >
 
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/img_mobile"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="@color/main_blue"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Mobile"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        />
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/img_mobile"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/main_blue"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/splash2"
+                            android:src="@drawable/img_cable"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fiber"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/splash1"
+                            android:src="@drawable/twotone_music_video_24"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Music"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#C80E00"
+                            android:src="@drawable/img_watching"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="JioTV"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginTop="10dp"
                     >
 
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="@color/splash2"
-                        android:src="@drawable/img_cable"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Fiber"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        />
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/teal_200"
+                            android:src="@drawable/img_youtube"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Shorts"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#F44336"
+                            android:src="@drawable/img_bag"
+                            android:padding="15dp"
+                            app:tint="#fff"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Shop"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/purple_700"
+                            android:src="@drawable/img_graduation_cap"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="eLearning"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="@color/splash3"
+                            android:src="@drawable/img_rupee_symbol"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="UPI"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginTop="10dp"
                     >
 
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="@color/splash1"
-                        android:src="@drawable/twotone_music_video_24"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Music"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        />
+                        android:padding="2dp"
+                        >
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#AA1685"
+                            android:src="@drawable/img_badge"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Play and Win"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
 
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="#C80E00"
-                        android:src="@drawable/img_watching"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="JioTV"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        />
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#13B31A"
+                            android:src="@drawable/baseline_sports_esports_24"
+                            android:padding="15dp"
+                            app:tint="#fff"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Games"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#B51105"
+                            android:src="@drawable/img_news"
+                            android:padding="15dp"
+                            app:tint="#fff"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="News"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="#232222"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/circle"
+                            android:backgroundTint="#48C6CEFF"
+                            android:src="@drawable/round_keyboard_arrow_down_24"
+                            android:padding="15dp"
+                            app:tint="@color/main_blue"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="More"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="#232222"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -246,281 +455,295 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="4"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
                 >
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="@color/teal_200"
-                        android:src="@drawable/img_youtube"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Shorts"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/top_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginBottom="8dp"
+                    />
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="#F44336"
-                        android:src="@drawable/img_bag"
-                        android:padding="15dp"
-                        app:tint="#fff"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Shop"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="@color/purple_700"
-                        android:src="@drawable/img_graduation_cap"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="eLearning"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="@color/splash3"
-                        android:src="@drawable/img_rupee_symbol"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="UPI"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
+                    android:id="@+id/top_dot_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical"
+                    />
 
             </LinearLayout>
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="4"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFEFF"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:id="@+id/d"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/img_mobile"
+                            app:tint="@color/main_blue"
+                            />
+
+                        <TextView
+                            android:id="@+id/d1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile prepaid "
+                            android:textColor="#353535"
+                            android:layout_toEndOf="@id/d"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            />
+                        <TextView
+                            android:id="@+id/ph_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9798678022"
+                            android:textColor="#353535"
+                            android:textStyle="bold"
+                            android:layout_toEndOf="@id/d1"
+                            android:layout_toStartOf="@id/e"
+                            android:layout_centerVertical="true"
+                            />
+                        <ImageView
+                            android:id="@+id/e"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/round_keyboard_arrow_right_24"
+                            app:tint="@color/main_blue"
+                            android:layout_alignParentEnd="true"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Data"
+                                android:textSize="12sp"
+                                android:textColor="#1C1C1C"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="992.65 MB"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:textColor="#222222"
+                                android:textSize="16sp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="left of 2 GB"
+                                android:textSize="11sp"
+                                android:layout_marginTop="5dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Renews in 6 hours"
+                                android:layout_marginTop="5dp"
+                                android:textSize="11sp"
+                                android:layout_marginBottom="10dp"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#9E9E9E"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Plan"
+                                android:textSize="12sp"
+                                android:textColor="#1C1C1C"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rs.719"
+                                android:layout_marginTop="5dp"
+                                android:textStyle="bold"
+                                android:textColor="#222222"
+                                android:textSize="16sp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="37 days left"
+                                android:textSize="11sp"
+                                android:layout_marginTop="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="View Plan"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/main_blue"
+                            android:background="@drawable/s_stroke_curve"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Recharge"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:background="@drawable/s_stroke_curve"
+                            android:backgroundTint="@color/main_blue"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                           android:layout_marginStart="10dp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFE3DA"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="JioFiber, Live TV and More"
+                        android:layout_weight="2"
+                        android:textColor="#1C1C1C"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Explore now"
+                        android:layout_weight="1"
+                        android:textColor="#FF5722"
+                        android:textStyle="bold"
+                        android:gravity="end"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trending now"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginTop="25dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <!--TODO edit the page -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFEFF"
                 >
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
 
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="#AA1685"
-                        android:src="@drawable/img_badge"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Play&nbsp;Win"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="#13B31A"
-                        android:src="@drawable/baseline_sports_esports_24"
-                        android:padding="15dp"
-                        app:tint="#fff"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Games"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="#B51105"
-                        android:src="@drawable/img_news"
-                        android:padding="15dp"
-                        app:tint="#fff"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="News"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="2dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:background="@drawable/circle"
-                        android:backgroundTint="#48C6CEFF"
-                        android:src="@drawable/round_keyboard_arrow_down_24"
-                        android:padding="15dp"
-                        app:tint="@color/main_blue"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="More"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-
-    <LinearLayout
-        android:id="@+id/h_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        >
-
-    </LinearLayout>
 
 </RelativeLayout>

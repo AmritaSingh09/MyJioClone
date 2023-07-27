@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:paddingBottom="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ECECEC"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:paddingTop="10dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            >
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/main_blue"
+                android:src="@drawable/round_home_24"
+                app:tint="#fff"
+                android:padding="3dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Jio"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#403E3E"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            >
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/img_rupee_symbol"
+                app:tint="#474343"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recharge"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="#403E3E"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            >
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/twotone_music_video_24"
+                app:tint="#474343"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JioTunes"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="#403E3E"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            >
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/round_headset_mic_24"
+                app:tint="#474343"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="JioCare"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="#403E3E"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            >
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:src="@drawable/round_dehaze_24"
+                android:scaleType="fitXY"
+                app:tint="#474343"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menu"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="#403E3E"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

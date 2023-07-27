@@ -2,4 +2,6 @@
     <string name="app_name">My Jio</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">MyJio</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
