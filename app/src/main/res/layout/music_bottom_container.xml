@@ -1,12 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_alignParentBottom="true"
     android:paddingBottom="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/main_music"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/v_img_music"
+            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="10dp"
+            app:cardCornerRadius="5dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_banner_sale"
+                android:scaleType="centerCrop"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_play_circle_24"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginVertical="10dp"
+            android:layout_centerVertical="true"
+            app:tint="#E1222928"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/v_img_music"
+            android:layout_centerVertical="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Top15"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#121212"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to play"
+                android:textSize="11sp"
+                android:textColor="#171717"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -34,17 +101,15 @@
             <ImageView
                 android:layout_width="21dp"
                 android:layout_height="21dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="@color/main_blue"
-                android:src="@drawable/round_home_24"
-                app:tint="#fff"
+                android:src="@drawable/round_music_note_24"
+                app:tint="#07C6B4"
                 android:padding="3dp"
                 />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="My Jio"
+                android:text="Music"
                 android:textStyle="bold"
                 android:layout_marginTop="3dp"
                 android:gravity="center"
@@ -66,38 +131,8 @@
             <ImageView
                 android:layout_width="21dp"
                 android:layout_height="21dp"
-                android:src="@drawable/img_rupee_symbol"
-                app:tint="#474343"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Recharge"
-                android:textStyle="bold"
-                android:layout_marginTop="3dp"
-                android:gravity="center"
-                android:textColor="#403E3E"
-                android:textSize="12sp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/v_music"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="2dp"
-            >
-
-            <ImageView
-                android:layout_width="21dp"
-                android:layout_height="21dp"
                 android:src="@drawable/twotone_music_video_24"
                 app:tint="#474343"
-                android:scaleType="fitXY"
                 />
 
             <TextView
@@ -125,7 +160,7 @@
             <ImageView
                 android:layout_width="21dp"
                 android:layout_height="21dp"
-                android:src="@drawable/round_headset_mic_24"
+                android:src="@drawable/round_search_24"
                 app:tint="#474343"
                 android:scaleType="fitXY"
                 />
@@ -133,7 +168,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="JioCare"
+                android:text="Browse"
                 android:textStyle="bold"
                 android:layout_marginTop="3dp"
                 android:gravity="center"
@@ -155,7 +190,7 @@
             <ImageView
                 android:layout_width="21dp"
                 android:layout_height="21dp"
-                android:src="@drawable/round_dehaze_24"
+                android:src="@drawable/round_person_24"
                 android:scaleType="fitXY"
                 app:tint="#474343"
                 />
@@ -163,7 +198,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Menu"
+                android:text="MyLibrary"
                 android:textStyle="bold"
                 android:layout_marginTop="3dp"
                 android:gravity="center"

@@ -13,7 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyJio"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ui.Activities.Main.CustomerSupport"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activities.Main.Music"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Activities.Main.Recharge"
+            android:exported="false" />
         <activity
             android:name=".ui.Activities.Splash.FirstPage"
             android:exported="true"
@@ -24,7 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.Activities.Main.MainActivity"
             android:exported="false"

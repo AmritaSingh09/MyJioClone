@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="main_music">#87CBB3</color>
+
     <!--splash-->
     <color name="main_blue">#253CCB</color>
     <color name="splash1">#8ACFAE</color>
